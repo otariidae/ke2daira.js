@@ -1,6 +1,6 @@
 # ke2daira.js
 
-A JavaScript imprementation of [ke2daira](https://github.com/ryuichiueda/ke2daira)
+A JavaScript implementation of [ke2daira](https://github.com/ryuichiueda/ke2daira)
 
 ## Installation
 
