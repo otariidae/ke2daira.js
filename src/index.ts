@@ -1,15 +1,18 @@
 import { tokenize } from "kuromojin"
+import { katakanaToMora } from "kana2mora"
 
 const SEPARATOR = " "
 
 export async function ke2dairanization(line: string): Promise<string> {
   const yomis = await toYomi(line.split(SEPARATOR))
 
-  const firstHead = yomis[0][0]
-  const firstTail = yomis[0].substring(1)
+  const firstMora = katakanaToMora(yomis[0])
+  const firstHead = firstMora[0]
+  const firstTail = firstMora.slice(1).join("")
 
-  const lastHead = yomis[yomis.length - 1][0]
-  const lastTail = yomis[yomis.length - 1].substring(1)
+  const lastMora = katakanaToMora(yomis[yomis.length - 1])
+  const lastHead = lastMora[0]
+  const lastTail = lastMora.slice(1).join("")
 
   yomis[0] = lastHead + firstTail
   yomis[yomis.length - 1] = firstHead + lastTail
