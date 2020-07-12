@@ -11,7 +11,7 @@ $ npm i ke2daira
 ## Usage
 
 ```js
-const ke2dairanization = require("ke2daira")
+const { ke2dairanization } = require("ke2daira")
 
 ke2dairanization("松平 健")
   .then((ke2dairanized) => {

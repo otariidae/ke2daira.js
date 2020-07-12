@@ -2,7 +2,7 @@ import { tokenize } from "kuromojin"
 
 const SEPARATOR = " "
 
-export default async function ke2dairanization(line: string): Promise<string> {
+export async function ke2dairanization(line: string): Promise<string> {
   const yomis = await toYomi(line.split(SEPARATOR))
 
   const firstHead = yomis[0][0]
