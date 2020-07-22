@@ -20,11 +20,11 @@ describe("test words", () => {
   it("チェ ゲバラ", async () => {
     assert.equal(await ke2dairanization("チェ ゲバラ"), "ゲ チェバラ")
   })
-  it("{ア,カ}トウ {カ,ア}イ", async () => {
-    assert.equal(
-      await ke2dairanization("阿藤 快"),
-      await ke2dairanization("加藤 あい")
-    )
+  it("カトウ アイ", async () => {
+    assert.equal(await ke2dairanization("加藤 あい"), "アトウ カイ")
+  })
+  it("アトウ カイ", async () => {
+    assert.equal(await ke2dairanization("阿藤 快"), "カトウ アイ")
   })
   it("ハリー ジェームズ ポッター", async () => {
     assert.equal(

@@ -25,7 +25,8 @@ ke2dairanization("松平 健")
 
 ## Known issues
 
-- `ke2dairanization("加藤 あい")` is not equal to `ke2dairanization("阿藤 快")` because `ke2dairanization("阿藤 快")` wrongly turns into `コトウ アコロヨ`
+- `ke2dairanization("加藤 あい")` is equal to `アトウ カイ` but `ke2dairanization("阿藤 快")` is not equal to `カトウ アイ`.
+  `ke2dairanization("阿藤 快")` wrongly turns into `コトウ アコロヨ`
 
 ## License
 MIT
