@@ -4,7 +4,11 @@ import { katakanaToMora } from "kana2mora"
 const SEPARATOR = " "
 
 export async function ke2dairanization(line: string): Promise<string> {
-  const yomis = await toYomi(line.split(SEPARATOR))
+  const yomis = await toYomi(line.trim().split(SEPARATOR))
+
+  if (yomis.length <= 1) {
+    return yomis.join(SEPARATOR)
+  }
 
   const firstMora = katakanaToMora(yomis[0])
   const firstHead = firstMora[0]
