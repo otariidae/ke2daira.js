@@ -40,4 +40,20 @@ describe("test words", () => {
       "ダルバス パーシバル ウルフリック ブライアン アンブルドア"
     )
   })
+
+  it("1 word", async () => {
+    assert.equal(await ke2dairanization("松平"), "マツダイラ")
+  })
+  it("space + 1 word", async () => {
+    assert.equal(await ke2dairanization(" 松平"), "マツダイラ")
+  })
+  it("1 word + space", async () => {
+    assert.equal(await ke2dairanization(" 松平 "), "マツダイラ")
+  })
+  it("space", async () => {
+    assert.equal(await ke2dairanization(" "), "")
+  })
+  it("empty", async () => {
+    assert.equal(await ke2dairanization(""), "")
+  })
 })
