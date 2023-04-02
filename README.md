@@ -11,6 +11,10 @@ $ npm i ke2daira
 ## Usage
 
 ```js
+// as ECMAScript modules
+import { ke2dairanization } from "ke2daira"
+
+// or as CommonJS modules
 const { ke2dairanization } = require("ke2daira")
 
 ke2dairanization("松平 健")
