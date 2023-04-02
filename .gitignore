@@ -1,4 +1,5 @@
-dist
+dist_cjs
+dist_esm
 
 .idea
 

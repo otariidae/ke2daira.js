@@ -1,4 +1,4 @@
-# ke2daira.js ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/otariidae/ke2daira.js/Node.js%20CI) ![npm](https://img.shields.io/npm/v/ke2daira)
+# ke2daira.js ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/otariidae/ke2daira.js/node.js.yml) ![npm](https://img.shields.io/npm/v/ke2daira)
 
 A JavaScript implementation of [ke2daira](https://github.com/ryuichiueda/ke2daira)
 

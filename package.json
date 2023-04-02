@@ -2,15 +2,31 @@
   "name": "ke2daira",
   "version": "0.3.1",
   "description": "A JavaScript implementation of ke2daira",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "type": "module",
+  "main": "./dist_cjs/index.js",
+  "types": "./dist_esm/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist_esm/index.d.ts",
+        "default": "./dist_esm/index.js"
+      },
+      "require": {
+        "types": "./dist_cjs/index.d.ts",
+        "default": "./dist_cjs/index.js"
+      }
+    }
+  },
   "files": [
-    "dist",
+    "dist_cjs",
+    "dist_esm",
     "src"
   ],
   "scripts": {
-    "build": "tsc",
-    "prettier": "prettier --no-semi --tab-width 2 --write \"{src,test}/**/*.ts\"",
+    "clean": "ts-node scripts/clean.ts",
+    "prebuild": "npm run clean",
+    "build": "tsc && tsc -p tsconfig.cjs.json && ts-node scripts/generate_cjs_pkgjson.ts",
+    "prettier": "prettier --no-semi --tab-width 2 --write \"**/*.ts\"",
     "test": "node --test --require ts-node/register \"test/index.ts\""
   },
   "repository": {
@@ -25,9 +41,10 @@
   "homepage": "https://github.com/otariidae/ke2daira.js#readme",
   "devDependencies": {
     "@types/node": "^18.13.0",
+    "dirname-filename-esm": "^1.1.1",
     "prettier": "^2.8.4",
     "ts-node": "^10.9.1",
-    "typescript": "^4.9.5"
+    "typescript": "^5.0.3"
   },
   "dependencies": {
     "kana2mora": "^0.1.0",
