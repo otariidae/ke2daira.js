@@ -1,6 +1,6 @@
 import test from "node:test"
 import { strict as assert } from "assert"
-import { ke2dairanization } from "../src"
+import { ke2dairanization } from "../src/index.ts"
 
 test("test words", async (t) => {
   await t.test("松平 健", async () => {

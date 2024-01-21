@@ -27,7 +27,7 @@
     "prebuild": "npm run clean",
     "build": "tsc && tsc -p tsconfig.cjs.json && ts-node scripts/generate_cjs_pkgjson.ts",
     "prettier": "prettier --no-semi --tab-width 2 --write \"**/*.ts\"",
-    "test": "node --test --require ts-node/register \"test/index.ts\""
+    "test": "node --test --loader ts-node/esm \"test/index.ts\""
   },
   "repository": {
     "type": "git",
