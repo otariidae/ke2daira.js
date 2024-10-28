@@ -23,11 +23,11 @@
     "src"
   ],
   "scripts": {
-    "clean": "ts-node scripts/clean.ts",
+    "clean": "tsx scripts/clean.ts",
     "prebuild": "npm run clean",
-    "build": "tsc && tsc -p tsconfig.cjs.json && ts-node scripts/generate_cjs_pkgjson.ts",
+    "build": "tsc && tsc -p tsconfig.cjs.json && tsx scripts/generate_cjs_pkgjson.ts",
     "prettier": "prettier --no-semi --tab-width 2 --write \"**/*.ts\"",
-    "test": "node --test --loader ts-node/esm \"test/index.ts\""
+    "test": "tsx --test \"test/index.ts\""
   },
   "repository": {
     "type": "git",
@@ -43,7 +43,7 @@
     "@types/node": "^18.13.0",
     "dirname-filename-esm": "^1.1.1",
     "prettier": "^2.8.4",
-    "ts-node": "^10.9.1",
+    "tsx": "^4.19.2",
     "typescript": "^5.0.3"
   },
   "dependencies": {
