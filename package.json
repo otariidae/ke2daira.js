@@ -40,7 +40,7 @@
   },
   "homepage": "https://github.com/otariidae/ke2daira.js#readme",
   "devDependencies": {
-    "@types/node": "^22.10.2",
+    "@types/node": "^24.0.15",
     "dirname-filename-esm": "^1.1.1",
     "prettier": "^3.3.3",
     "typescript": "^5.0.3"
